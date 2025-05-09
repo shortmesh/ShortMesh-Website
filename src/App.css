@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Unbounded';
+  src: url('/Unbounded/Unbounded-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Unbounded', sans-serif !important;
+}
