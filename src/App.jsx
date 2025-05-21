@@ -1,12 +1,30 @@
-import ComingSoon from "./Pages/ComingSoon";
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
+import {NavComp} from "./components";
+import { Landing } from './pages';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#3F51B5',
+    },
+  },
+});
 
 function App() {
   return (
-    <>
-      <ComingSoon />
-    </>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
+        <NavComp />
+        <Routes>
+          <Route path="/" element={<Landing/>} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
