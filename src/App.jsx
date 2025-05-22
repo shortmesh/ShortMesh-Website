@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import {NavComp} from "./components";
+import {FooterComp, NavComp} from "./components";
 import { Landing } from './pages';
 
 const theme = createTheme({
@@ -23,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing/>} />
         </Routes>
+        <FooterComp />
       </Router>
     </ThemeProvider>
   );

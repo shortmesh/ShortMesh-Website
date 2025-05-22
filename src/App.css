@@ -6,5 +6,19 @@
 }
 
 * {
+  font-family:  Ubuntu, sans-serif;
+}
+
+.header {
   font-family: 'Unbounded', sans-serif !important;
+}
+
+@keyframes pulseBackground {
+  0% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.05); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 0.3; }
+}
+
+.pulse {
+  animation: pulseBackground 2s infinite !important;
 }
