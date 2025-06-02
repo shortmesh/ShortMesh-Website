@@ -318,7 +318,7 @@ const Landing = () => {
           >
             <Box
               sx={{
-                backgroundColor: "#000000",
+                backgroundColor: "#3F51B5",
                 borderRadius: 2,
                 px: { md: 10, xs: 2 },
                 py: 1,
@@ -336,7 +336,7 @@ const Landing = () => {
                   sx={{
                     textTransform: "none",
                     fontWeight: "bold",
-                    borderRadius: 2,
+                    borderRadius: 1,
                     px: 4,
                     color: "#fff",
                     "&.Mui-selected": {
@@ -351,7 +351,7 @@ const Landing = () => {
                   sx={{
                     textTransform: "none",
                     fontWeight: "bold",
-                    borderRadius: 2,
+                    borderRadius: 1,
                     px: 4,
                     color: "#fff",
                     "&.Mui-selected": {
@@ -384,7 +384,12 @@ const Landing = () => {
                   <Button
                     variant="contained"
                     size="large"
-                    sx={{ borderRadius: 2, textTransform: "none" }}
+                    sx={{
+                      borderRadius: 1,
+                      textTransform: "none",
+                      bgcolor: "#000000",
+                      color: "#ffffff",
+                    }}
                   >
                     Request Demo
                   </Button>
@@ -476,7 +481,12 @@ const Landing = () => {
                   <Button
                     variant="contained"
                     size="large"
-                    sx={{ borderRadius: 2, textTransform: "none" }}
+                    sx={{
+                      borderRadius: 1,
+                      textTransform: "none",
+                      bgcolor: "#000000",
+                      color: "#ffffff",
+                    }}
                   >
                     Request Demo
                   </Button>
