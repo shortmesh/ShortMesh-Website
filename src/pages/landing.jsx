@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { Tabs, Tab } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import {
   ApiOutlined,
@@ -24,6 +25,7 @@ import {
   SecurityScanOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
+import BannerImage from "./BannerImage";
 
 const codeSnippets = {
   js: `const res = await fetch("https://api.shortmesh.io/messages", {
@@ -64,7 +66,7 @@ const Landing = () => {
           variant="outlined"
           sx={{
             height: "100%",
-            bgcolor: "#e5e8f2",
+            // bgcolor: "#e5e8f2",
             transition: "transform 0.3s, box-shadow 0.3s",
             "&:hover": {
               transform: "translateY(-8px)",
@@ -94,19 +96,19 @@ const Landing = () => {
         <Box
           sx={{
             position: "absolute",
-            top: { md: -200, xs: -50 },
-            left: { md: -150, xs: -50 },
-            width: { md: 800, xs: 400 },
+            top: { md: -20, xs: -0 },
+            left: { md: -0, xs: -50 },
+            width: { md: 800, xs: 200 },
             height: { md: 800, xs: 400 },
             background:
-              "radial-gradient(circle, rgba(46, 74, 153, 0.53) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(232, 237, 253, 0.94) 0%, transparent 70%)",
             filter: "blur(100px)",
             zIndex: 0,
           }}
         />
         <Box
           sx={{
-            pt: { xs: 15, sm: 20, md: 20 },
+            pt: { xs: 13, sm: 15, md: 15 },
             my: "auto",
             alignContent: "center",
             textAlign: "center",
@@ -123,11 +125,11 @@ const Landing = () => {
               variant="h1"
               sx={{
                 background:
-                  "linear-gradient(90deg,rgb(48, 73, 201),rgb(7, 12, 36),rgb(0, 0, 0))",
+                  "linear-gradient(90deg,rgb(33, 45, 100),rgb(7, 12, 36),rgb(0, 0, 0))",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 fontWeight: "bold",
-                fontSize: { xs: "4.5rem", sm: "5rem", md: "7.5rem" },
+                fontSize: { xs: "4rem", sm: "5rem", md: "7.5rem" },
                 mixBlendMode: "hard-light",
                 color: "black",
               }}
@@ -174,25 +176,14 @@ const Landing = () => {
         {/* Image section */}
         <Box
           sx={{
-            my: "auto",
-            alignContent: "center",
-            mx: "auto",
-            textAlign: "center",
-            pt: 4,
-            pl: 4,
-            zIndex: 1,
-            position: "relative",
-            width: { md: "80%", xs: "100%", sm: "100%", lg: "60%" },
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            //my: { xs: 4, md: 3 }, 
           }}
         >
-          <motion.img
-            src="/ban.svg"
-            alt="banner"
-            style={{ maxWidth: "100%" }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
-          />
+          <BannerImage />
         </Box>
       </Box>
 
@@ -200,11 +191,13 @@ const Landing = () => {
       <Box
         sx={{
           textAlign: "center",
-          my: 20,
-          px: 2,
-          mx: { xs: 2, md: 15, sm: 10, lg: 25 },
+          py: 13,
+          my: 5,
+          // px: 2,
+          px: { xs: 2, md: 15, sm: 10, lg: 25 },
           zIndex: 1,
           position: "relative",
+          bgcolor: "#F3F3F3",
         }}
       >
         <Typography className="header" variant="h4">
@@ -254,24 +247,11 @@ const Landing = () => {
             description="Easily connect and manage multiple social media platforms—add new ones anytime from the dashboard."
           />
         </Grid>
-        <Box
-          sx={{
-            position: "absolute",
-            top: { md: 80, xs: 800 },
-            left: { md: 600, xs: -50 },
-            width: { md: 800, xs: 400 },
-            height: { md: 800, xs: 400 },
-            background:
-              "radial-gradient(circle, rgba(168, 187, 240, 0.53) 0%, transparent 70%)",
-            filter: "blur(100px)",
-            zIndex: 0,
-          }}
-        />
       </Box>
 
       {/* More Section */}
       <Box
-        sx={{ my: { xs: 20, md: 25, ld: 30 }, mx: { xs: 2, md: 15, lg: 25 } }}
+        sx={{ my: { xs: 15, md: 20, ld: 25 }, mx: { xs: 2, md: 15, lg: 25 } }}
       >
         <Typography className="header" variant="h4" textAlign="center">
           Built For Everyone
@@ -320,7 +300,7 @@ const Landing = () => {
                   }}
                 />
                 <Tab
-                  label="Business Managers"
+                  label="Entrepreneurs"
                   value="business"
                   sx={{
                     textTransform: "none",
@@ -371,10 +351,10 @@ const Landing = () => {
                     p: 0,
                     borderRadius: 2,
                     overflow: "hidden",
-                    backgroundColor: "#F8F9FF",
+                    backgroundColor: "#F3F3F3",
                     color: "#000000",
                     fontFamily: "monospace",
-                    minHeight: "200px",
+                    minHeight: "300px",
                   }}
                 >
                   <TabContext value={codeTab}>
@@ -383,7 +363,7 @@ const Landing = () => {
                       indicatorColor="primary"
                       textColor="primary"
                       sx={{
-                        backgroundColor: "#EBEEFF",
+                        backgroundColor: "#D8D8D8",
                         px: 2,
                       }}
                     >
@@ -430,7 +410,7 @@ const Landing = () => {
             </Grid>
           </TabPanel>
 
-          {/* Business Managers */}
+          {/* Entrepreneurs */}
           <TabPanel value="business">
             <Grid container spacing={4}>
               <Grid size={{ xs: 12, md: 6 }}>
@@ -440,7 +420,7 @@ const Landing = () => {
                   sx={{ mb: 4 }}
                   gutterBottom
                 >
-                  For Business Managers
+                  For Entrepreneurs
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 6 }}>
                   Get a real-time view of all customer conversations in one
@@ -463,10 +443,10 @@ const Landing = () => {
                     p: 0,
                     borderRadius: 2,
                     overflow: "hidden",
-                    backgroundColor: "#F8F9FF",
+                    backgroundColor: "#F3F3F3",
                     color: "#000000",
                     fontFamily: "monospace",
-                    minHeight: "200px",
+                    minHeight: "300px",
                   }}
                 >
                   <TabContext value={codeTab}>
@@ -475,7 +455,7 @@ const Landing = () => {
                       indicatorColor="primary"
                       textColor="primary"
                       sx={{
-                        backgroundColor: "#EBEEFF",
+                        backgroundColor: "#D8D8D8",
                         px: 2,
                       }}
                     >

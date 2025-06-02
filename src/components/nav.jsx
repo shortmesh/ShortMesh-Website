@@ -6,7 +6,7 @@ const NavComp = () => {
   return (
     <Box
       sx={{
-        p: { xs: 1, sm: 3, md: 4 },
+        p: { xs: 2, sm: 3, md: 4 },
         bgcolor: "transparent",
         display: "flex",
         alignItems: "center",
@@ -19,11 +19,12 @@ const NavComp = () => {
           component="img"
           src="/logo.svg"
           alt="Logo"
-          sx={{ height: 30, mr: 1 }}
+          sx={{ width: 30, mr: 1 }}
         />
         <Typography
           variant="h6"
-          sx={{ fontWeight: "bold", fontSize: { xs: 15, md: 20 } }}
+          className="header"
+          sx={{ fontWeight: "bold", fontSize: { xs: 18, md: 20 } }}
         >
           ShortMesh
         </Typography>
@@ -39,7 +40,7 @@ const NavComp = () => {
         </Button> */}
         <a href="https://github.com/shortmesh" target="_blank">
           {" "}
-          <GithubOutlined style={{ fontSize: 27 }} />{" "}
+          <GithubOutlined style={{ fontSize: 27, color: "black" }} />{" "}
         </a>
       </Box>
     </Box>
