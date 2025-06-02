@@ -94,8 +94,8 @@ function BannerImage() {
           </linearGradient>
         </defs>
         {platformYs.map((y, index) => {
-          const offsets = Array.from({ length: 4 }).map(
-            () => Math.random() * 3
+          const offsets = Array.from({ length: 2 }).map(
+            () => Math.random() * 4
           );
           return (
             <React.Fragment key={`platform-${index}`}>
@@ -104,7 +104,7 @@ function BannerImage() {
                 d={`M 0,${y} Q ${centerX - 100},${y} ${centerX},${centerY}`}
                 fill="none"
                 stroke="#ccc"
-                strokeWidth="1"
+                strokeWidth="0.5"
               />
               {generateMovingCircles(
                 2,
@@ -123,16 +123,19 @@ function BannerImage() {
           },${centerY} ${outputX},${centerY}`}
           fill="none"
           stroke="#ccc"
-          strokeWidth="1"
+          strokeWidth="0.5"
         />
-        {generateMovingCircles(5, "output-path", 6, "smallCircleGradient")}{" "}
-        <circle
-          cx={centerX}
-          cy={centerY}
-          r={40}
-          fill="url(#logoCircleGradient)"
-          stroke="#D0D0D0"
+        {generateMovingCircles(6, "output-path", 6, "smallCircleGradient")}{" "}
+        <rect
+          x={centerX - 40}
+          y={centerY - 40}
+          width={80}
+          height={80}
+          fill="f8f8f8"
+          stroke="#D8D8D8"
           strokeWidth="3"
+          rx={2}
+          ry={2}
         />
       </svg>
 

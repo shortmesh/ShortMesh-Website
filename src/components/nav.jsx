@@ -24,7 +24,7 @@ const NavComp = () => {
         <Typography
           variant="h6"
           className="header"
-          sx={{ fontWeight: "bold", fontSize: { xs: 18, md: 20 } }}
+          sx={{ fontWeight: "bold", fontSize: { xs: 12, md: 20 } }}
         >
           ShortMesh
         </Typography>

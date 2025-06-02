@@ -22,3 +22,7 @@
 .pulse {
   animation: pulseBackground 2s infinite !important;
 }
+
+body {
+  background-color: #ffffff !important;
+}
